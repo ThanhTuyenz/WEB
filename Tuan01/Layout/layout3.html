@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(224, 194, 111);
+            border: 1px solid black;
+            height: 1200px;
+            width: 2400px;
+        }
+        header, footer, menu {
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid black;
+        }
+        footer{
+            border-top: 1px solid black;
+            border-bottom: none;
+        }
+        .main-content {
+            display: flex;
+            height: 90%;
+            width: 100%;
+        }
+        nav {
+            width: 20%;
+            height: 100%;
+            border-right: 1px solid black;
+        }
+        aside {
+            width: 20%;
+            height: 100%;
+        }
+        section {
+            width: 60%;
+            height: 100%;
+            border-right: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            header>
+        </header>
+        <menu>
+            menu
+        </menu>
+        <div class="main-content">
+            <nav>
+                nav
+            </nav>
+            <section>
+                section
+            </section>
+            <aside>
+                aside
+            </aside>
+        </div>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
