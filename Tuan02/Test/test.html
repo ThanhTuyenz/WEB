@@ -1,59 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>IUH - Đại học Công nghiệp TP.HCM</title>
     <style>
-        body {
-            display: grid;
-            grid-template-areas: 
-                "header header"
-                "nav section"
-                "footer footer";
-            grid-template-columns: 1fr 3fr;
-            grid-template-rows: auto 1fr auto;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+        * {
+            padding: 0;
+            margin: 0 auto;
         }
-        header {
-            grid-area: header;
-            background-color: #7c8fb1;
-            padding: 10px;
-            text-align: center;
+        
+        .wrapper {
+            height: 800px;
+            width: 1089px;
+            border: 1px solid rebeccapurple;
         }
+        
         nav {
-            grid-area: nav;
-            background-color: #7c8fb1;
-            padding: 10px;
+            height: 50px;
+            width: 1089px;
+            background-color: aqua;
         }
-        section {
-            grid-area: section;
-            background-color: #f4dcc0;
-            padding: 10px;
+        
+        header {
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(99, 163, 65);
         }
-        article {
-            background-color: #f4dcc0;
-            padding: 10px;
+        
+        .content {
+            height: 500px;
+            width: 1089px;
+            background-color: rgb(72, 150, 127);
         }
-        footer {
-            grid-area: footer;
-            background-color: #7c8fb1;
-            padding: 10px;
+        
+        .menu_left {
+            height: 500px;
+            width: 20%;
+            background-color: rgb(170, 162, 54);
+            float: left;
+        }
+        
+        .ct1 {
+            height: 500px;
+            width: 40%;
+            background-color: rgb(170, 162, 54);
+            float: left;
+        }
+        
+        .ct2 {
+            height: 500px;
+            width: 40%;
+            background-color: rgb(170, 162, 54);
+            float: left;
+        }
+        
+        .menu li {
+            height: 50px;
+            width: auto;
+            background-color: rgb(170, 172, 170);
+            float: left;
+            line-height: 50px;
             text-align: center;
+            list-style: none;
+            border-right: 1px solid rgb(148, 146, 146);
+            position: relative;
+            
         }
-        nav, section, header, footer {
-            border: 1px solid black;
+        .menu ul li > .sub-menu{
+            display: none;
+            position: absolute;
+        }
+        .sub-menu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .sub-menu{
+            display: block;
+        }
+        
+        li a {
+            text-decoration: none;
+            font-weight: bolder;
+            color: rgb(64, 59, 109);
+            padding: 0 20px;
+        }
+        
+        li:hover {
+            background-color: rgb(170, 172, 170);
+        }
+        
+        li:hover>a {
+            color: rgb(214, 22, 22);
         }
     </style>
 </head>
+
 <body>
-    <header>header</header>
-    <nav>nav</nav>
-    <section>
-        <article>article</article>
-    </section>
-    <footer>footer</footer>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://iuh.edu.vn"><i class="fas fa-home"></i></a></li>
+                <li>
+                    <a href="#">GIỚI THIỆU</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Giới thiệu chung</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li><a href="#">ĐÀO TẠO</a></li>
+                <li><a href="#">TUYỂN SINH</a></li>
+                <li><a href="#">TÂN SINH VIÊN 2024</a></li>
+                <li><a href="#">SINH VIÊN</a></li>
+                <li><a href="#">VĂN BẰNG</a></li>
+            </ul>
+        </nav>
+        <header></header>
+        <div class="content">
+            <div class="menu_left">
+                <ul class="menu">
+                    <li><a href="#">ITEM X</a></li>
+                    <li><a href="#">ITEM X</a></li>
+                    <li><a href="#">ITEM X</a></li>
+                    <li><a href="#">ITEM X</a></li>
+                    <li><a href="#">ITEM X</a></li>
+                </ul>
+            </div>
+            <div class="ct1"></div>
+            <div class="ct2"></div>
+        </div>
+        <footer></footer>
+    </div>
 </body>
+
 </html>
